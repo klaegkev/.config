@@ -12,9 +12,10 @@
     "hyprland/workspaces",
   ],
   "modules-right": [
-    "pulseaudio",
     "network",
-    "temperature",
+    "bluetooth",
+    "pulseaudio",
+    // "temperature",
     "battery",
     "clock",
   ],
@@ -64,7 +65,7 @@
     "format-full": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
+    "format-alt": "{icon}",
     "format-icons": [
       "",
       "",
@@ -77,8 +78,9 @@
   "network": {
     "format": "{ifname}",
     //"format-wifi": "  {signalStrength}%  {bandwidthDownBytes}  {bandwidthUpBytes} ",
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "   {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-wifi": " ",
+    // "format-ethernet": "   {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-ethernet": " ",
     "format-disconnected": "Not connected",
     "tooltip-format": "  {ifname} via {gwaddri}",
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
@@ -141,6 +143,12 @@
     "format": "<span color='#f38ba8'> </span> <span color='#cdd6f4'>{used:0.1f}G</span>"
   },
 
+"bluetooth": {
+    "format": "  ",
+    "format-connected": "  {num_connections} ",
+    "tooltip": true,
+    "on-click": "blueman-manager"
+}
 }
 
 
